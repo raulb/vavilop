@@ -1,3 +1,8 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  layout 'application'
+
+  def home 
+  end
+  class BrowserIsIE6OrLower < Exception; end;
+  
 end

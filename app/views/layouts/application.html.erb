@@ -1,14 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
-  <title>Vavilop</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+  <meta name="google-site-verification" content="ThfwHT-x4wnKuXCrCQzprF0XtwCWYMg10frr351zgVo" />
+  <title>Vanessa Viaji</title>
 
-<%= yield %>
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Lobster&subset=cyrillic,latin','layout' %>
+  <%= javascript_include_tag 'jquery.min','jquery.scrollTo-min','application' %>
+  
+  <meta name="keywords" content="vanessa, viaji, planner, publicidad, ad, portfolio, miami, school" >
+  <meta name="description" content="Web personal de Vanessa Viaji, una experta en publicidad al servicio de la innovación"/>
+  
+</head>
+<body> 
+    <div id="outer_layout">        
+        <div id="layout">
+           <h1>Vanessa Viaji</h1>
+           <h2>Próximamente podrás ver mi portfolio, mientras tanto...</h2>
+
+           <a class="twitter" href="http://twitter.com/vavilop">Sígueme en twitter <span>@vavilop</span></a>
+           <a class="linkedin" href="http://www.linkedin.com/in/vanessaviaji">Visita mi linkedin <span>vanessaviaji</span></a>           
+            <%= yield %>
+        </div>
+    </div>
 
 </body>
 </html>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21784895-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
