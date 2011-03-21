@@ -2,27 +2,105 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
   <meta name="google-site-verification" content="Bax4BWZlBPpZb6ZRK0vBhQtRkd7hEfMkp0LmxN1D93E" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
   <title>Vanessa Viaji</title>
 
-  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Lobster&subset=cyrillic,latin','layout' %>
-  <%= javascript_include_tag 'jquery.min','jquery.scrollTo-min','application' %>
+  <%= stylesheet_link_tag 'layout','fonts/fonts' %>
+  <%= javascript_include_tag 'jquery.min','plugins/jquery.livetwitter','common' %>
   
   <meta name="keywords" content="vanessa, viaji, planner, publicidad, ad, portfolio, miami, school, digital" >
   <meta name="description" content="Web personal de Vanessa Viaji, una experta en publicidad al servicio de la innovación"/>
   
 </head>
 <body> 
-    <div id="outer_layout">        
-        <div id="layout">
-           <h1>Vanessa Viaji</h1>
-           <h2>Próximamente podrás ver mi portfolio. Mientras tanto...</h2>
+    <div id="mamufas"></div>
+    <div id="outer_layout"> 
+       <%#= image_tag 'temp/bg-development.png',:alt=>"En desarrollo", :title=>"En desarrollo", :class=>'development' %>
 
-           <a class="twitter" href="http://twitter.com/vavilop">Sígueme en twitter <span>@vavilop</span></a>
-           <a class="linkedin" href="http://www.linkedin.com/in/vanessaviaji">Visita mi linkedin <span>vanessaviaji</span></a>           
-            <%= yield %>
-        </div>
-    </div>
+             
+        <div class="layout">
 
+          <header>
+            <!-- logo -->
+            <h1><%= link_to (image_tag "common/bg-logo.png", :alt => 'Vanessa Viaji Logo'), root_path %></h1>
+            
+            <%= image_tag 'common/bg-miami-logo.png',:alt=>"Miami Ad School", :class=>'miami' %>
+            
+            <!-- Menu -->
+            <nav>
+              <% if action_name.eql?('portfolio') %>
+                <%= link_to('portfolio', portfolio_path, :class=>'current') %>
+              <%else%>
+                <%= link_to('portfolio', portfolio_path) %>
+              <%end%>
+              
+              <% if current_page?(:action => 'experience')  %> 
+                <%= link_to('experiencia', experiencia_path, :class=>'current') %>
+              <%else%>
+                <%= link_to('experiencia', experiencia_path) %>
+              <%end%>
+
+              <% if current_page?(:action => 'contact')  %> 
+                <%= link_to('contacto', contacto_path, :class=>'current') %>
+              <%else%>
+                <%= link_to('contacto', contacto_path) %>
+              <%end%>
+
+              <% if current_page?(:action => 'blog')  %> 
+                <%= link_to('blog', blog_path, :class=>'current') %>  
+              <%else%>
+                <%= link_to('blog', blog_path) %>
+              <%end%>                            
+            </nav>
+          </header>  
+          </div> <!-- layout -->
+
+          <%= yield %>
+          
+          <footer>
+              <div class="layout">
+                <div class="inner_layout footer">
+                  <hgroup class="first">
+                    <%= link_to (image_tag "common/bg-logo-little.png", :alt => 'Vanessa Viaji Logo', :class=>'vane_logo'), root_path %>
+                    <ul>
+                      <li>
+                        <label>mail</label>
+                        <%= link_to('vavilop@yahoo.com', 'mailto:vavilop@yahoo.com') %>  
+                      </li>
+                      <li>
+                        <label>twitter</label>
+                        <%= link_to('@vavilop', 'http://www.twitter.com/vavilop') %>  
+                      </li>
+                      <li>
+                        <label>linkedin</label>
+                        <%= link_to('vanessaviaji', 'http://www.linkedin.com/in/vanessaviaji') %>  
+                      </li>
+                      <li>
+                        <label>flickr</label>
+                        <%= link_to('vavilop', 'http://www.flickr.com/photos/vavilop') %>  
+                      </li>
+                    </ul>
+                  </hgroup>
+                    
+                  <hgroup class="tweets">
+                    <h5>últimos tweets</h5>
+                    <div id="last_tweets"></div>
+                  </hgroup> <!-- tweets -->
+                  <nav>
+                    <%= link_to('blog', blog_path) %>
+                    <%= link_to('contacto', contacto_path) %>                    
+                    <%= link_to('experiencia', experiencia_path) %> 
+                    <%= link_to('portfolio', portfolio_path) %>                     
+                  </nav>
+                  <div id="developed_by">
+                    <%= link_to('Web diseñada y desarrollada por Raúl Barroso', 'http://www.raulbarroso.com', :class=>'info') %>  
+                    <%= link_to (image_tag "common/bg-logo-ra.png", :alt => 'Raúl Barroso Logo'), 'http://www.raulbarroso.com' %>
+                  </div>
+                </div>
+              </div>
+          </footer>
+          
+    </div> <!-- outer_layout -->
 </body>
 </html>
 

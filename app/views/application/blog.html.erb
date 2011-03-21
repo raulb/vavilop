@@ -1,0 +1,48 @@
+<%= javascript_include_tag 'plugins/jquery.scrollTo-min','plugins/jquery.htmlClean-min','plugins/retweet','blog' %>
+
+<script type="text/javascript" src="http://vavilop.tumblr.com/api/read/json?num=10"></script>
+
+<section>
+  <header class="single">
+    <div class="layout">
+      <div class="inner_layout">
+        <div class="left">
+          <h2>BLOG</h2>
+          <h5>Un rincón donde compartir</h5>
+        </div>
+        <div class="right">
+          <h3>Nos vemos donde siempre</h3>
+        </div>
+      </div> <!-- inner_layout -->
+    </div> <!-- layout -->
+  </header>
+  
+  <div class="layout">
+    <div class="inner_layout">
+      <div class="content">
+        <section class="blog">
+          <!-- left -->
+          <hgroup>
+            <!-- content added by tumblr -->
+            <ul id="posts"></ul>
+          </hgroup>
+          
+          <div class="elevator_way">
+            <!-- elevator -->
+            <a class="top"></a>
+          </div>
+          <!-- right -->
+          <aside class="radius shadow">
+            <h3>últimos <span id="posts_account">10</span> posts publicados</h3>
+            <ul id="index_posts">
+            </ul>
+            <footer>
+              <a href="http://vavilop.tumblr.com/">visita mi</a>
+            </footer>
+          </aside>
+        </section>
+      </div> <!-- content -->
+      
+    </div> <!-- inner_layout -->
+  </div> <!-- layout -->
+</section>

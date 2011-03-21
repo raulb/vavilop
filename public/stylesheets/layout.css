@@ -1,25 +1,237 @@
 body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,form,fieldset,p{margin:0; padding:0; font-weight:normal;}
 img,fieldset{border:none; padding:0; margin:0;}
 ul,li {list-style:none;}
-body{font:13px 'Lobster',Helvetica,Arial,serif; color:white; background-color:#634363; background:url('/images/common/bgr-body.jpg');}
+body{font:13px "Trebuchet MS", Helvetica,Arial,serif; color:white; background-color:#634363; background:url('/images/common/bgr-body.jpg');}
 span.clear{clear:both;}
 div.left{float:left; width:auto;}
 div.right{float:right; width:auto;}
 a{text-decoration:none;}
+em {font-style:normal;}
 a:focus{outline:none;}
 ul:focus {outline:none;}
 input:focus{outline:none}
 
+.radius {-webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;}
+.shadow {box-shadow:0px 0px 20px #342230; -moz-box-shadow:0px 0px 20px #342230; -webkit-box-shadow:0px 0px 20px #342230;}
+
+div#mamufas {width:100%; height:100%; background-color:black; opacity:0.0; position:fixed; z-index:-10;}
 div#outer_layout{margin:0 auto; width:100%; }
-div#layout {width:1080px; margin:0 auto; padding:50px 30px; background:url('/images/hind_corner.png') no-repeat top right; min-height:265px;}
-h1 {font:bold 45px 'Lobster'; color:white; text-shadow:5px 5px 10px #3C283C;}
-h2 {float:left; margin:100px; font:normal 32px 'Lobster'; text-shadow:3px 3px 10px #3C283C; color:#99CC99;}
-a.twitter {float:left; margin:0 0 0 65px; background:url('/images/temp/icon-twitter.png') no-repeat 0 0; width:235px; height:95px; padding:25px 0 0 115px; font:normal 32px 'Lobster'; color:#74D4E3; line-height:30px;}
-a.twitter span {color:white;}
-a.twitter:hover {cursor:pointer; color:white;}
-a.twitter:hover span {color:#74D4E3;}
-a.linkedin {float:left; margin:0 0 0 115px; background:url('/images/temp/icon-linkedin.png') no-repeat 0 0; width:235px; height:95px; padding:25px 0 0 115px; font:normal 32px 'Lobster'; color:#74D4E3; line-height:30px;}
-a.linkedin span {color:white;}
-a.linkedin:hover {cursor:pointer; color:white;}
-a.linkedin:hover span {color:#74D4E3;}
+div.layout {width:1200px; margin:0 auto; padding:0;}
+div.inner_layout {float:left; width:1140px; margin-left:50px;}
+div.inner_layout.footer {margin-left:25px; width:1160px;}
+
+/* ------- error*/
+body.error .left {width:585px;}
+body.error .left h2 {float:left; font:bold 48px "YanoneKaffeesatz"; color:white; width:auto; text-transform:none; margin-top:30px;}
+body.error .left h3 {float:left; font:bold 32px "YanoneKaffeesatz"; color:white; width:auto; margin-top:21px; text-shadow:3px 3px 5px #3C283C;}
+body.error .right {width:400px; position:relative;}
+body.error .right h2 {position:absolute; top:-48px; right:0; font:bold 200px "YanoneKaffeesatz"; color:white; width:auto; margin-top:0;}
+body.error .steps {float:left; width:100%; height:auto;}
+body.error .steps li {float:left; width:328px; height:208px; margin:70px 70px 0 0;}
+body.error .steps li.first {margin-top:20px;}
+body.error .steps li.last {margin-right:0;}
+
+/* ------- header*/
+header {float:left; margin-top:20px; position:relative; width:1185px;} 
+header h1 img {float:left; width:351px; height:133px;}
+header img.miami {position:absolute; top:-200px; right:-15px; width:327px; height:267px; z-index:10;}                
+
+header nav {float:right; margin-top:90px;}
+header nav a {font:normal 24px 'Lobster'; color:white; text-shadow:3px 3px 5px #3C283C; margin-left:57px; letter-spacing:1.0px;}
+header nav a.current {color:#66CCFF;}
+header nav a:hover {cursor:pointer; color:#66CCFF;}
+
+img.development {position:fixed; top:0; left:0; width:89px; height:88px; z-index:10;}
+
+div.layout section {float:left; margin-top:40px; width:1131px;}
+
+/* ------- header section */
+section header {width:100%; background:url('/images/common/bgr-head-section.png') repeat-x 0; height:190px; margin-top:50px;}
+section header.single {background:url('/images/common/bgr-head-section.png') repeat-x bottom; height:140px;}
+section header .left {width:380px;}
+section header .right {width:585px; margin-right:3px;}
+section header h2 {float:left; font:normal 40px "YanoneKaffeesatz"; text-transform:uppercase; color:#33BBFF; line-height:21px; margin-top:33px; width:100%;}
+section header h3 {float:right; font:normal 48px "YanoneKaffeesatz"; color:white; line-height:46px; margin-top:15px; width:585px; text-align:right; }
+section header h5 {float:left; width:240px; font:normal 15px "Trebuchet MS"; color:white; line-height:17px; margin-top:15px;  display:none;}
+/* ------- body section */
+section .content {float:left; padding:30px 0 90px;}
+section .content h5 {float:left; width:100%; font:normal 1.2em "Trebuchet MS"; color:white;}
+
+/* -------------------- portfolio*/
+section .content .works {float:left; width:100%; margin-top:40px; padding-bottom:30px; z-index:100;}
+section .content .works li {float:left; width:333px; height:335px; background-color:white; padding:16px; margin:20px 20px 0 0;  position:relative; z-index:150; overflow: hidden}
+section .content .works li:hover {cursor:pointer;}
+section .content .works li img {width:331px; height:233px;}
+section .content .works li.last {margin-right:0;}
+
+.boxcaption{ position: absolute; background: #181018; height: 337px; padding:15px; width: 335px; bottom:-300px; left:0; opacity: .9; /* For IE 5-7 */ filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90); /* For IE 8 */
+-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
+.boxcaption h3 {color:#BB727B;}
+.boxcaption .target {margin-top:40px;}
+.captionfull .boxcaption { top: 260; left: 0; } .caption .boxcaption { top: 220; left: 0; }
+
+.boxcaption a {float:left; margin-top:30px; color:#66CCFF;}
+.boxcaption a:hover {text-decoration:underline;}
+
+/* ----------------------- presentation */
+.presentation_content {display:none;}
+.presentation_content .presentation {width:638px;height:550px;overflow:hidden;}
+
+/* -------------------- contact */
+section hgroup ul.social {float:left; width:100%;}
+section hgroup ul.social li {float:left; width:203px; height:203px; margin-right:29px;}
+section hgroup ul.social li a {float:left; width:203px; height:203px;}
+section hgroup ul.social li a.twitter {background:url('/images/contact/bg-twitter.png') no-repeat 0 0;} 
+section hgroup ul.social li a.mail {background:url('/images/contact/bg-mail.png') no-repeat 0 0;} 
+section hgroup ul.social li a.linkedin {background:url('/images/contact/bg-linkedin.png') no-repeat 0 0;} 
+section hgroup ul.social li a.flickr {background:url('/images/contact/bg-flickr.png') no-repeat 0 0;} 
+section hgroup ul.social li a.tumblr {background:url('/images/contact/bg-tumblr.png') no-repeat 0 0;} 
+section hgroup ul.social li a:hover {cursor:pointer; background-position:0 -203px;}
+section hgroup ul.social li.last {margin-right:0;}
+
+/* -------------------- experience */
+section div.about_me {float:right; background-color:white; width:928px; height:auto; position:relative; margin-top:70px; padding:20px 20px 30px;}
+section div.about_me div.info {float:right; width:640px;}
+section div.about_me div.info p.first {margin-top:5px;}
+section div.about_me div.info p {float:left; text-align:left; width:100%; font:normal 21px "YanoneKaffeesatzLight"; color:#333333; line-height:24px; margin-top:20px;}
+section div.philosophy {background:url('/images/experience/bg-philosophy.png'); width:441px; height:441px; position:absolute; top:-100px; left:-163px; text-align:center;}
+section div.philosophy h5 {font:bold 24px "YanoneKaffeesatz"; color:#372537; margin-top:120px;} 
+section div.philosophy hgroup {float:left; width:100%; margin-top:20px;}
+section div.philosophy p {font:normal 21px "YanoneKaffeesatz"; color:white; line-height:21px;}
+section div.philosophy p.last {float:left; width:100%; margin-top:50px}
+
+section div.experience {float:left; width:100%; background-color:white; height:332px; margin-top:30px; position:relative}
+section div.experience span.label {position:absolute; top:-31px; left:30px; width:130px; height:31px; padding-top:2px; -webkit-border-top-left-radius: 20px; -webkit-border-top-right-radius: 20px; -moz-border-radius-topleft: 20px; -moz-border-radius-topright: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; text-align:center; font:bold 24px "YanoneKaffeesatz"; color:white; padding-top:0; background: -moz-linear-gradient(100% 100% 90deg, #BC4E1C, #F36929);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F36929), to(#BC4E1C));}
+  
+section div.experience img {float:left; width:1090px; height:147px; margin:20px;}
+section div.experience ul.dates {width:1090px; height:120px; position:absolute; top:120px; left:20px; }
+section div.experience ul.dates li {float:left; background:url('/images/experience/bg-dotted-line.png') no-repeat center bottom; width:85px; height:85px; position:relative;}
+section div.experience ul.dates li div.tooltip {display:none; position:absolute; top:104px; z-index:10; }
+section div.experience ul.dates li div.tooltip label {font:normal 21px "YanoneKaffeesatz"; color:white; line-height:19px; float:left; margin:34px 0 0 24px; width:175px;}
+section div.experience ul.dates li div.tooltip p {font:normal 16px "YanoneKaffeesatzLight"; color:white; float:left; margin:5px 0 0 24px;}
+section div.experience ul.dates li:hover div.tooltip {display:inline;}
+section div.experience ul.dates li:hover {cursor:pointer;}
+section div.experience ul.dates li.first {margin-left:41px;}
+section div.experience ul.dates li.first div.tooltip {width:209px; height:123px; background:url('/images/experience/bg-tooltip-1.png') no-repeat 0 0; left:-61px;}
+section div.experience ul.dates li.second {margin-left:29px;}
+section div.experience ul.dates li.second div.tooltip {width:249px; height:103px; background:url('/images/experience/bg-tooltip-2.png') no-repeat 0 0; left:-81px;}
+section div.experience ul.dates li.third {margin-left:13px;}
+section div.experience ul.dates li.third div.tooltip {width:169px; height:103px; background:url('/images/experience/bg-tooltip-3.png') no-repeat 0 0; left:-41px;}
+section div.experience ul.dates li.fourth {margin-left:69px;}
+section div.experience ul.dates li.fourth div.tooltip {width:171px; height:117px; background:url('/images/experience/bg-tooltip-4.png') no-repeat 0 0; left:-41px;}
+section div.experience ul.dates li.fourth div.tooltip p {width:128px;}
+section div.experience ul.dates li.fifth {margin-left:150px;}
+section div.experience ul.dates li.fifth div.tooltip {width:209px; height:102px; background:url('/images/experience/bg-tooltip-567.png') no-repeat 0 0; left:-61px;}
+section div.experience ul.dates li.sixth {margin-left:21px;}
+section div.experience ul.dates li.sixth div.tooltip {width:209px; height:102px; background:url('/images/experience/bg-tooltip-567.png') no-repeat 0 0; left:-61px;}
+section div.experience ul.dates li.seventh {margin-left:95px;}
+section div.experience ul.dates li.seventh div.tooltip {width:209px; height:102px; background:url('/images/experience/bg-tooltip-567.png') no-repeat 0 0; left:-61px;}
+section div.experience ul.dates li p.date {font:normal 19px "YanoneKaffeesatzLight"; color:#333333; position:absolute; bottom:-26px; left:0; width:100%; text-align:center;}
+
+section div.experience a.linkedin {position:absolute; font:normal 21px "YanoneKaffeesatzLight"; color:#333333; background:url('/images/experience/btn-linkedin.png') no-repeat right 0; height:32px; width:145px; bottom:30px; right:30px; padding-top:5px;}
+section div.experience a.linkedin em {font:bold 21px "YanoneKaffeesatz";}
+section div.experience a.linkedin:hover {background-position:right -37px; color:black;}
+/* ----------------------- blog */
+section.blog {margin-top:0!important; position:relative;}
+
+/* ------------- left*/
+section.blog hgroup {float:left; width:560px; height:auto;}
+section.blog hgroup ul {float:left; width:560px; height:auto;}
+section.blog hgroup ul li {position:relative; float:left; margin-top:60px; padding:30px 30px 25px; width:500px; height:auto; background-color:white; }
+section.blog hgroup ul li span.circle {position:absolute; width:60px; height:45px; top:-40px; left:-33px; text-align:center; font:bold 21px "YanoneKaffeesatz"; color:white; padding-top:15px;}
+section.blog hgroup ul li span.date {position:absolute; top:-31px; right:30px; width:auto; height:22px; -webkit-border-top-left-radius: 20px; -webkit-border-top-right-radius: 20px; -moz-border-radius-topleft: 20px; -moz-border-radius-topright: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; text-align:center; font:normal 11px "Trebuchet MS"; color:white; padding:9px 20px 0; background-color:#F36929;
+}
+
+section.blog hgroup ul li a.retweet {position:absolute; top:-27px; left:70px; width:auto; height:19px; -webkit-border-top-left-radius: 20px; -webkit-border-top-right-radius: 20px; -moz-border-radius-topleft: 20px; -moz-border-radius-topright: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; text-align:center; font:normal 11px "Trebuchet MS"; color:white; padding:8px 15px 0 36px; 
+background:#649632 url('/images/blog/bg-tweet-this.png') no-repeat 0 0}
+section.blog hgroup ul li a.retweet:hover {background-color:#4D7227; cursor:pointer;}
+
+section.blog hgroup ul li h3 {float:left; width:502px; font:bold 17px "Trebuchet MS"; color:#333333; line-height:17px;}
+section.blog hgroup ul li h3 a {color:#3D7999;}
+section.blog hgroup ul li h3 a:hover {text-decoration:underline; cursor:pointer;}
+section.blog hgroup ul li div.media {float:left; text-align:center; margin-top:20px; width:502px;}
+section.blog hgroup ul li div.media.alone {margin:0;}
+section.blog hgroup ul li p {float:left; margin-top:20px; font:normal 15px "Trebuchet MS"; color:#333333; width:500px;}
+section.blog hgroup ul li p a {color:#3D7999;}
+section.blog hgroup ul li p a:hover {text-decoration:underline; cursor:pointer;}
+section.blog hgroup ul li h3 p {margin:0;}
+section.blog hgroup ul li ul.tags {width:500px; margin-top:30px; border-top:1px solid #CCCCCC; padding-top:10px;}
+section.blog hgroup ul li ul.tags li {box-shadow:none; -moz-box-shadow:none; -webkit-box-shadow:none; margin:5px 5px 0 0; width:auto; padding:0;}
+section.blog hgroup ul li ul.tags li a {text-align:center; padding:0 10px 2px; font:normal 12px "YanoneKaffeesatzLight"; color:white; background-color:#999999; }
+
+/*When it'll be ok!!!*/
+/*section.blog hgroup ul li ul.tags li a:hover {background-color:#666666; cursor:pointer;}*/
+
+
+section.blog hgroup ul li.audio span.circle {background:url('/images/blog/bg-audio.png') no-repeat 0 0;}
+section.blog hgroup ul li.chat span.circle {background:url('/images/blog/bg-quote.png') no-repeat 0 0;}
+section.blog hgroup ul li.link span.circle {background:url('/images/blog/bg-link.png') no-repeat 0 0;}
+section.blog hgroup ul li.quote span.quote {position:absolute; width: 31px; height: 19px; top:20px; }
+section.blog hgroup ul li.quote h3 {margin-top:20px;}
+section.blog hgroup ul li.quote span.quote.open {background: url('/images/blog/bg-open-quote.png') no-repeat 0 0; left:20px;}
+section.blog hgroup ul li.quote span.quote.close {background: url('/images/blog/bg-close-quote.png') no-repeat 0 0; right:20px;}
+section.blog hgroup ul li.picture span.circle {background:url('/images/blog/bg-picture.png') no-repeat 0 0;}
+section.blog hgroup ul li.quote span.circle {background:url('/images/blog/bg-chat.png') no-repeat 0 0;}
+section.blog hgroup ul li.text span.circle {background:url('/images/blog/bg-text.png') no-repeat 0 0;}
+section.blog hgroup ul li.video span.circle {background:url('/images/blog/bg-video.png') no-repeat 0 0;}
+/* ------------- elevator_way */
+section.blog div.elevator_way {float:left; width:116px; height:100%; margin-left:10px;}
+/* ------------- right */
+section.blog aside {float:right; width:376px; height:auto; padding:25px 30px 25px; background-color:white; margin-top:60px; }
+section.blog aside h3 {float:left; width:370px; font:bold 21px "YanoneKaffeesatz"; color:#333333; border-bottom:1px solid #333333;}
+section.blog aside ul {float:left; width:370px; height:auto; margin-top:20px;}
+section.blog aside ul li {float:left; margin-top:5px; width:370px; height:auto;}
+section.blog aside ul li span {float:left; color:white; padding-top:2px; width:52px; height:24px; font:normal 17px "YanoneKaffeesatz"; margin-right:10px; text-align:center; 
+-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+section.blog aside ul li span.audio {background-color:#BB727B;}
+section.blog aside ul li span.chat {background-color:#999933;}
+section.blog aside ul li span.link {background-color:#669933;}
+section.blog aside ul li span.picture {background-color:#FF6633;}
+section.blog aside ul li span.quote {background-color:#FF66FF;}
+section.blog aside ul li span.text {background-color:#CC9966;}
+section.blog aside ul li span.video {background-color:#66CCFF;}
+section.blog aside ul li div {float:left; width:305px; margin-top:2px;}
+section.blog aside ul li a {float:left; width:auto; font:normal 13px "Trebuchet MS"; color:#333333; border-bottom:1px solid white;}
+section.blog aside ul li a:hover {color:#1A1A1A; cursor:pointer; text-decoration:underline;}
+section.blog aside ul li p {float:left; font:normal 11px "Trebuchet MS"; color:#999999; line-height:19px;}
+section.blog footer {float:left; margin-top:10px; width:370px; border-top:1px solid #CCCCCC; height:auto; background:none!important; padding:0;}
+section.blog footer a {float:right; font:normal 21px "YanoneKaffeesatzLight"; color:#333333; background:url('/images/blog/bg-tumblr.png') no-repeat right 1px; height:20px; width:152px; bottom:30px; right:30px; margin-top:10px;}
+section.blog footer a:hover {background-position:right -20px; color:black;}
+/* ----------------------- elevator */
+.top { position:fixed; bottom:10px; background:url('../images/common/bg-elevator.png') no-repeat 0 0; width:114px; height:114px; display:none;}
+.top.enabled {display:inline;}
+.top:hover { background-position:0 -116px; cursor:pointer;}
+
+
+/* ----------------------- footer */
+footer {float:left; width:100%; background-color:#372537; height:auto; padding:20px 0;}
+footer hgroup {float:left; padding:10px 0; height:auto;}
+footer hgroup.first {width:290px;}
+footer hgroup.tweets {width:266px; margin-top:19px;}
+footer hgroup.first ul {float:left; width:260px;  padding:40px 0 0 30px;}
+footer hgroup.first ul li {float:left; width:290px; margin-top:2px;}
+footer hgroup.first ul li label {float:left; font:normal 1.8em "YanoneKaffeesatz"; color:white; letter-spacing:0.5px; width:100%;}
+footer hgroup.first ul li a {float:left; width:auto; font:normal 0.9em "Trebuchet MS"; color:#66CCFF; border-bottom:1px solid #372537;}
+footer hgroup.first ul li a:hover {cursor:pointer; border-bottom:1px dotted #66CCFF;}
+
+footer hgroup.tweets h5 {float:left; width:100%; font:normal 2em "YanoneKaffeesatz"; color:white; letter-spacing:0.5px;}
+footer hgroup.tweets #last_tweets {float:left; width:100%; margin-top:15px;}
+footer hgroup.tweets #last_tweets .tweet {float:left; width:100%; margin-top:10px;} 
+footer hgroup.tweets #last_tweets .tweet .time {float:left; font:normal 0.813em "Trebuchet MS"; color:#999999;}
+footer hgroup.tweets #last_tweets .tweet .time a {color:#999999!important; }
+footer hgroup.tweets #last_tweets .tweet .time a:hover {border-bottom:1px dotted #999999!important;}
+footer hgroup.tweets #last_tweets .tweet p {float:left; font:normal 1em "Trebuchet MS"; color:white; line-height:15px; margin-top:5px; width:100%;}
+footer hgroup.tweets #last_tweets .tweet p a {color:#FFCC00; border-bottom:1px solid #372537; }
+footer hgroup.tweets #last_tweets .tweet p a:hover {cursor:pointer; border-bottom:1px dotted #FFCC00;}
+
+footer nav {float:right; width:390px; height:auto; margin:30px 8px 0 0;}
+footer nav a {float:right; font:normal 1.1em "Trebuchet MS"; color:white; margin-left:15px; border-bottom:1px solid #372537;}
+footer nav a:hover {cursor:pointer; border-bottom:1px dotted white;}
+footer img.vane_logo {float:left; width:187px; height:71px; }
+footer div#developed_by {float:right; margin-top:200px; width:265px;}
+body.error footer div#developed_by {width:700px;}
+footer div#developed_by img {float:right; width:56px; height:42px; margin-right:12px;}
+footer div#developed_by a.info {float:right; width:182px; height:auto; font:normal 0.9em "Trebuchet MS"; color:white; border-bottom:1px solid #372537; margin-top:6px; line-height:13px;}
+footer div#developed_by a.info:hover {cursor:pointer; text-decoration:underline;}
 

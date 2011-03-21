@@ -1,10 +1,24 @@
 Vavilop::Application.routes.draw do
   
-  # Home
-  root :to => 'application#home'      
-  
-  # This has to be at the end
+
+  # Home (portfolio)
+  match 'portfolio' => 'application#portfolio'
+
+  # Experience
+  match 'experiencia' => 'application#experience'
+
+  # Contact
+  match 'contacto' => 'application#contact'
+
+  # Blog
+  match 'blog' => 'application#blog'
+
+  # Home (portfolio)
+  root :to => 'application#portfolio'
+
+  # Errors (This has to be at the end)
   match '*a', :to => 'errors#routing'
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
