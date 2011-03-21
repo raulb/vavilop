@@ -95,13 +95,13 @@ section div.about_me div.info {float:right; width:640px;}
 section div.about_me div.info p.first {margin-top:5px;}
 section div.about_me div.info p {float:left; text-align:left; width:100%; font:normal 21px "YanoneKaffeesatzLight"; color:#333333; line-height:24px; margin-top:20px;}
 section div.philosophy {background:url('/images/experience/bg-philosophy.png'); width:441px; height:441px; position:absolute; top:-100px; left:-163px; text-align:center;}
-section div.philosophy h5 {font:bold 24px "YanoneKaffeesatz"; color:#372537; margin-top:120px;} 
+section div.philosophy h5 {font:normal 24px "YanoneKaffeesatz"; color:#372537; margin-top:120px;} 
 section div.philosophy hgroup {float:left; width:100%; margin-top:20px;}
 section div.philosophy p {font:normal 21px "YanoneKaffeesatz"; color:white; line-height:21px;}
 section div.philosophy p.last {float:left; width:100%; margin-top:50px}
 
 section div.experience {float:left; width:100%; background-color:white; height:332px; margin-top:30px; position:relative}
-section div.experience span.label {position:absolute; top:-31px; left:30px; width:130px; height:31px; padding-top:2px; -webkit-border-top-left-radius: 20px; -webkit-border-top-right-radius: 20px; -moz-border-radius-topleft: 20px; -moz-border-radius-topright: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; text-align:center; font:bold 24px "YanoneKaffeesatz"; color:white; padding-top:0; background: -moz-linear-gradient(100% 100% 90deg, #BC4E1C, #F36929);
+section div.experience span.label {position:absolute; top:-31px; left:30px; width:130px; height:31px; padding-top:2px; -webkit-border-top-left-radius: 20px; -webkit-border-top-right-radius: 20px; -moz-border-radius-topleft: 20px; -moz-border-radius-topright: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; text-align:center; font:normal 24px "YanoneKaffeesatz"; color:white; padding-top:0; background: -moz-linear-gradient(100% 100% 90deg, #BC4E1C, #F36929);
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F36929), to(#BC4E1C));}
   
 section div.experience img {float:left; width:1090px; height:147px; margin:20px;}
@@ -179,7 +179,7 @@ section.blog hgroup ul li.video span.circle {background:url('/images/blog/bg-vid
 section.blog div.elevator_way {float:left; width:116px; height:100%; margin-left:10px;}
 /* ------------- right */
 section.blog aside {float:right; width:376px; height:auto; padding:25px 30px 25px; background-color:white; margin-top:60px; }
-section.blog aside h3 {float:left; width:370px; font:bold 21px "YanoneKaffeesatz"; color:#333333; border-bottom:1px solid #333333;}
+section.blog aside h3 {float:left; width:370px; font:normal 21px "YanoneKaffeesatz"; color:#333333; border-bottom:1px solid #333333;}
 section.blog aside ul {float:left; width:370px; height:auto; margin-top:20px;}
 section.blog aside ul li {float:left; margin-top:5px; width:370px; height:auto;}
 section.blog aside ul li span {float:left; color:white; padding-top:2px; width:52px; height:24px; font:normal 17px "YanoneKaffeesatz"; margin-right:10px; text-align:center; 
