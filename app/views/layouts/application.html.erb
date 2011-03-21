@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
   <meta name="google-site-verification" content="Bax4BWZlBPpZb6ZRK0vBhQtRkd7hEfMkp0LmxN1D93E" />
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
   <title>Vanessa Viaji</title>
 
@@ -12,6 +13,7 @@
   <meta name="description" content="Web personal de Vanessa Viaji, una experta en publicidad al servicio de la innovación"/>
   
 </head>
+
 <body> 
     <div id="mamufas"></div>
     <div id="outer_layout"> 
@@ -20,14 +22,14 @@
              
         <div class="layout">
 
-          <header>
+          <div class="header">
             <!-- logo -->
             <h1><%= link_to (image_tag "common/bg-logo.png", :alt => 'Vanessa Viaji Logo'), root_path %></h1>
             
             <%= image_tag 'common/bg-miami-logo.png',:alt=>"Miami Ad School", :class=>'miami' %>
             
             <!-- Menu -->
-            <nav>
+            <div class="nav">
               <% if action_name.eql?('portfolio') %>
                 <%= link_to('portfolio', portfolio_path, :class=>'current') %>
               <%else%>
@@ -51,16 +53,16 @@
               <%else%>
                 <%= link_to('blog', blog_path) %>
               <%end%>                            
-            </nav>
-          </header>  
+            </div>
+          </div>  
           </div> <!-- layout -->
 
           <%= yield %>
           
-          <footer>
+          <div class="footer">
               <div class="layout">
                 <div class="inner_layout footer">
-                  <hgroup class="first">
+                  <div class="first">
                     <%= link_to (image_tag "common/bg-logo-little.png", :alt => 'Vanessa Viaji Logo', :class=>'vane_logo'), root_path %>
                     <ul>
                       <li>
@@ -80,25 +82,25 @@
                         <%= link_to('vavilop', 'http://www.flickr.com/photos/vavilop') %>  
                       </li>
                     </ul>
-                  </hgroup>
+                  </div>
                     
-                  <hgroup class="tweets">
+                  <div class="tweets">
                     <h5>últimos tweets</h5>
                     <div id="last_tweets"></div>
-                  </hgroup> <!-- tweets -->
-                  <nav>
+                  </div> <!-- tweets -->
+                  <div class="nav">
                     <%= link_to('blog', blog_path) %>
                     <%= link_to('contacto', contacto_path) %>                    
                     <%= link_to('experiencia', experiencia_path) %> 
                     <%= link_to('portfolio', portfolio_path) %>                     
-                  </nav>
+                  </div>
                   <div id="developed_by">
                     <%= link_to('Web diseñada y desarrollada por Raúl Barroso', 'http://www.raulbarroso.com', :class=>'info') %>  
                     <%= link_to (image_tag "common/bg-logo-ra.png", :alt => 'Raúl Barroso Logo'), 'http://www.raulbarroso.com' %>
                   </div>
                 </div>
               </div>
-          </footer>
+          </div>
           
     </div> <!-- outer_layout -->
 </body>

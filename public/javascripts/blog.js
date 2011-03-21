@@ -14,7 +14,7 @@ $(document).ready(function(ev){
             });
             
    $('a.top').click(function(ev){
-      $.scrollTo('section.blog',400);
+      $.scrollTo('.section.blog',400);
    });
    
    

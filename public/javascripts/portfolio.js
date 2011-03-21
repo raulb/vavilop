@@ -23,7 +23,7 @@ $(document).ready(function(ev){
       			'padding'		: 0,
       			'href'			: '#presentation_content_1',
       			'transitionIn'	: 'elastic',
-      			'transitionOut'	: 'elastic',
+      			'transitionOut'	: 'elastic'
       		});
       
    });
