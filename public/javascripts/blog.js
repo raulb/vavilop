@@ -29,7 +29,7 @@ $(document).ready(function(ev){
        
        // Interesante post de @vavilop en       
        html_post = '<li id="post_'+i+'" class="radius shadow">';
-       html_post +=  '<a class="retweet" href="'+element.url+'">Interesante post de @vavilop en </a>';
+       html_post +=  '<a class="retweet" href="'+element.url+'" target="_blank">Interesante post de @vavilop en </a>';
        html_post += '<span class="date">'+element.date+'</span>'
        html_post += '<span class="circle"></span></li>';   
        $('ul#posts').append(html_post);
