@@ -37,7 +37,7 @@ div.section_error div.right h2 {position:absolute; top:-48px; right:0; font:bold
 /* ------- div.header*/
 div.header {float:left; margin-top:20px; position:relative; width:1185px; z-index:100;} 
 div.header h1 img {float:left; width:351px; height:133px;}
-div.header img.miami {position:absolute; top:-200px; right:-15px; width:327px; height:267px; z-index:100;}                
+div.header img.miami {position:absolute; top:-200px; right:-18px; width:327px; height:267px; z-index:100;}                
 
 div.header div.nav {float:right; margin-top:90px;}
 div.header div.nav a {font:normal 24px 'Lobster'; color:white; text-shadow:3px 3px 5px #3C283C; margin-left:57px; letter-spacing:1.0px;}
