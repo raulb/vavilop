@@ -54,7 +54,7 @@ div.section div.header.single {background:url('/images/common/bgr-head-section.p
 div.section div.header .left {width:380px;}
 div.section div.header .right {width:585px; margin-right:3px; padding-bottom:10px;}
 div.section div.header h2 {float:left; font:normal 40px "YanoneKaffeesatz"; text-transform:uppercase; color:#33BBFF; margin-top:23px; width:100%; height:50px; position:relative;}
-div.section div.header h3 {float:right; font:normal 48px "YanoneKaffeesatz"; color:white; margin-top:15px; width:585px; text-align:right; position:relative; z-index:0; }
+div.section div.header h3 {float:right; font:normal 48px "YanoneKaffeesatz"; color:white; margin-top:15px; width:585px; text-align:right; position:relative; z-index:0; line-height:45px; }
 div.section div.header h5 {float:left; width:240px; font:normal 15px "Trebuchet MS"; color:white; line-height:17px; margin-top:15px;  display:none;}
 /* ------- body div.section */
 div.section .content {float:left; padding:30px 0 90px;}
