@@ -1,4 +1,9 @@
 class ApplicationController < ActionController::Base
+  
+  class BrowserIsIE6OrLower < Exception; end;
+  
+  rescue_from BrowserIsIE6OrLower,            :with => :old_browser
+  
   layout 'application'
 
   def portfolio 
@@ -13,6 +18,8 @@ class ApplicationController < ActionController::Base
   def contact 
   end
   
-  class BrowserIsIE6OrLower < Exception; end;
+  def old_browser
+    render :file => "/public/404.html", :status => 200, :layout => false
+  end
   
 end
