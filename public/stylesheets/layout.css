@@ -17,7 +17,7 @@ input:focus{outline:none}
 div#mamufas {width:100%; height:100%; background-color:black; opacity:0.0; position:fixed; z-index:-10; filter: alpha(opacity = 0);}
 div#outer_layout{margin:0 auto; width:100%; }
 div.layout {width:1200px; margin:0 auto; padding:0; position:relative;}
-div.inner_layout {float:left; width:1140px; margin-left:50px; position:relative; z-index:0;}
+div.inner_layout {float:left; width:1140px; margin-left:50px; position:relative;}
 div.inner_layout.footer {margin-left:25px; width:1160px;}
 
 /* ------- error*/
@@ -202,7 +202,7 @@ div.section.blog div.footer {float:left; margin-top:10px; width:370px; border-to
 div.section.blog div.footer a {float:right; font:normal 21px "YanoneKaffeesatzLight"; color:#333333; background:url('/images/blog/bg-tumblr.png') no-repeat right 1px; height:20px; width:152px; bottom:30px; right:30px; margin-top:10px;}
 div.section.blog div.footer a:hover {background-position:right -20px; color:black;}
 /* ----------------------- elevator */
-.top { position:fixed; bottom:10px; background:url('../images/common/bg-elevator.png') no-repeat 0 0; width:114px; height:114px; display:none;}
+.top { position:fixed; bottom:10px; background:url('../images/common/bg-elevator.png') no-repeat 0 0; width:114px; height:114px; display:none; z-index:5;}
 .top.enabled {display:inline;}
 .top:hover { background-position:0 -116px; cursor:pointer;}
 
