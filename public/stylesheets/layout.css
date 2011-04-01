@@ -56,6 +56,7 @@ div.section div.header .right {width:585px; margin-right:3px; padding-bottom:10p
 div.section div.header h2 {float:left; font:normal 40px "YanoneKaffeesatz"; text-transform:uppercase; color:#33BBFF; margin-top:23px; width:100%; height:50px; position:relative;}
 div.section div.header h3 {float:right; font:normal 48px "YanoneKaffeesatz"; color:white; margin-top:15px; width:585px; text-align:right; position:relative; z-index:0; line-height:45px; }
 div.section div.header h5 {float:left; width:240px; font:normal 15px "Trebuchet MS"; color:white; line-height:17px; margin-top:15px;  display:none;}
+
 /* ------- body div.section */
 div.section .content {float:left; padding:30px 0 90px;}
 div.section .content h5 {float:left; width:100%; font:normal 1.2em "Trebuchet MS"; color:white;}
@@ -228,11 +229,11 @@ div.footer div.tweets #last_tweets .tweet p {float:left; font:normal 1em "Trebuc
 div.footer div.tweets #last_tweets .tweet p a {color:#FFCC00; border-bottom:1px solid #372537; }
 div.footer div.tweets #last_tweets .tweet p a:hover {cursor:pointer; border-bottom:1px dotted #FFCC00;}
 
-div.footer div.nav {float:right; width:390px; height:auto; margin:30px 8px 0 0;}
+div.footer div.nav {float:right; width:500px; height:auto; margin:30px 8px 0 0;}
 div.footer div.nav a {float:right; font:normal 1.1em "Trebuchet MS"; color:white; margin-left:15px; border-bottom:1px solid #372537;}
 div.footer div.nav a:hover {cursor:pointer; border-bottom:1px dotted white;}
 div.footer img.vane_logo {float:left; width:187px; height:71px; }
-div.footer div#developed_by {float:right; margin-top:200px; width:265px;}
+div.footer div#developed_by {float:right; width:390px; height:auto; margin:190px 8px 0 0;}
 body.error div.footer div#developed_by {width:700px;}
 div.footer div#developed_by img {float:right; width:56px; height:42px; margin-right:12px;}
 div.footer div#developed_by a.info {float:right; width:182px; height:auto; font:normal 0.9em "Trebuchet MS"; color:white; border-bottom:1px solid #372537; margin-top:6px; line-height:13px;}
