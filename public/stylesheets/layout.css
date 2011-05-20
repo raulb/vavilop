@@ -156,7 +156,7 @@ div.section.blog div.hgroup ul li h3 a {color:#3D7999;}
 div.section.blog div.hgroup ul li h3 a:hover {text-decoration:underline; cursor:pointer;}
 div.section.blog div.hgroup ul li div.media {float:left; text-align:center; margin-top:20px; width:502px;}
 div.section.blog div.hgroup ul li div.media.alone {margin:0;}
-div.section.blog div.hgroup ul li p {float:left; margin-top:20px; font:normal 15px "Trebuchet MS"; color:#333333; width:500px;}
+div.section.blog div.hgroup ul li p {float:left; margin-top:20px; font:normal 15px "Trebuchet MS"; color:#333333; width:500px; padding-bottom:10px;}
 div.section.blog div.hgroup ul li p a {color:#3D7999;}
 div.section.blog div.hgroup ul li p a:hover {text-decoration:underline; cursor:pointer;}
 div.section.blog div.hgroup ul li h3 p {margin:0;}
@@ -178,6 +178,7 @@ div.section.blog div.hgroup ul li.quote span.quote.close {background: url('/imag
 div.section.blog div.hgroup ul li.picture span.circle {background:url('/images/blog/bg-picture.png') no-repeat 0 0;}
 div.section.blog div.hgroup ul li.quote span.circle {background:url('/images/blog/bg-chat.png') no-repeat 0 0;}
 div.section.blog div.hgroup ul li.text span.circle {background:url('/images/blog/bg-text.png') no-repeat 0 0;}
+div.section.blog div.hgroup ul li.text p {padding-bottom:0;}
 div.section.blog div.hgroup ul li.video span.circle {background:url('/images/blog/bg-video.png') no-repeat 0 0;}
 /* ------------- elevator_way */
 div.section.blog div.elevator_way {float:left; width:116px; height:100%; margin-left:10px;}

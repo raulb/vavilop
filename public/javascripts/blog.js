@@ -2,9 +2,10 @@ var html_posts_list = "";
 var html_post = "";
 var num_posts = 0;
 
-
 $(document).ready(function(ev){
    
+   
+   // To show elevator
    $(window).scroll(function () {
             if ($(window.pageYOffset)[0] > 708) {
                   $('.top').fadeIn();
@@ -19,7 +20,6 @@ $(document).ready(function(ev){
    
    
    // The variable "tumblr_api_read" is now set.
-   
    $.each(tumblr_api_read.posts, function(i,element) {  
      
      if ((element.type == "regular")||(element.type == "video")||(element.type == "photo")||(element.type == "link")||(element.type == "quote")){
@@ -31,19 +31,21 @@ $(document).ready(function(ev){
        html_post = '<li id="post_'+i+'" class="radius shadow">';
        html_post +=  '<a class="retweet" href="'+element.url+'" target="_blank">Interesante post de @vavilop en </a>';
        html_post += '<span class="date">'+element.date+'</span>'
-       html_post += '<span class="circle"></span></li>';   
+       html_post += '<span class="circle"></span></li>';
+       
        $('ul#posts').append(html_post);
        html_post = "";
        
        $('li#list_element_'+i).find('p').text(' - '+element.date);
-       
-       switch(element.type){
+      
+       switch (element.type){
           case 'regular':
             $('li#post_'+i).addClass('text');
             $('li#post_'+i).children('span.circle').text("texto");
              
              html_post += '<h3>'+ element['regular-title'] +'</h3>';
-             html_post += '<p>'+ element['regular-body'] +'</p>';
+             html_post += element['regular-body'];
+             
              // ********
              $('li#list_element_'+i).children('span').addClass('text');
              $('li#list_element_'+i).children('span').text('texto');
@@ -56,7 +58,7 @@ $(document).ready(function(ev){
                
                 if (element['video-caption'] != "") {
                    html_post += '<h3>'+ element['photo-caption'] +'</h3>';
-                   $('li#list_element_'+i).find('a').text($.htmlClean(element['photo-caption'], {removeTags:["strong","p","a"]}));  
+                   $('li#list_element_'+i).find('a').append(cleanCustomHtml(element['photo-caption']));  
                 }
                 
                 if (element['photo-url-400'] != undefined) {
@@ -75,7 +77,7 @@ $(document).ready(function(ev){
               if (element['video-caption'] != "") {
                 html_post += '<h3>'+ element['video-caption'] +'</h3>';
                 html_post += '<div class="media">'+element['video-player']+'</div>';
-                $('li#list_element_'+i).find('a').text($.htmlClean(element['video-caption'], {removeTags:["strong","p","a"]}));                
+                $('li#list_element_'+i).find('a').append(cleanCustomHtml(element['video-caption']));                
               }else {
                 html_post += '<div class="media alone">'+element['video-player']+'</div>';
                 $('li#list_element_'+i).find('a').text('No le he puesto título, ;)');
@@ -128,5 +130,31 @@ $(document).ready(function(ev){
    });
 
 });
+
+
+// function to replace html elements not desired
+function cleanCustomHtml(text) {
+  
+  var textCleaned = text;
+
+  textCleaned = $.htmlClean(textCleaned, {removeTags:["a","span"],format:false});
+  
+  // To replace ... symbol
+  textCleaned = textCleaned.replace("&#8230;","...");
+   
+  // To add some spaces (between each p, closed tag and open p tag)
+  textCleaned = textCleaned.replace(/<\/p><p>/g," ");
+
+  // To clean p tags
+  textCleaned = $.htmlClean(textCleaned, {removeTags:["p"],format:false}); 
+  
+  // To make different to the title
+  textCleaned = textCleaned.replace("</strong>"," - </strong>");
+  
+  if (textCleaned.length > 200) textCleaned = textCleaned.substring(0, 197) + '...';
+
+  return textCleaned;
+  
+}
 
 
