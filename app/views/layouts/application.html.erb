@@ -4,7 +4,7 @@
   <meta name="google-site-verification" content="Bax4BWZlBPpZb6ZRK0vBhQtRkd7hEfMkp0LmxN1D93E" />
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Vanessa Viaji <% if action_name.eql?('portfolio') %> - Porfolio<%elsif current_page?(:action => 'experience') %> - Experiencia <% elsif current_page?(:action => 'contact') %>  - Contacto <% elsif current_page?(:action => 'blog') %> - Blog <%end%></title>
+  <title>Vanessa Viaji <%if current_page?(:action => 'experience') %> - Experiencia <% elsif current_page?(:action => 'contact') %>  - Contacto <% elsif current_page?(:action => 'blog') %> - Blog <%end%></title>
 
   <%= stylesheet_link_tag 'layout','fonts/fonts' %>
   <%= javascript_include_tag 'jquery.min','plugins/jquery.livetwitter','common' %>

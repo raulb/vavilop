@@ -1,7 +1,7 @@
 Vavilop::Application.routes.draw do
 
-  # Home (portfolio)
-  match 'portfolio' => 'application#portfolio'
+  # Portfolio
+  match "portfolio" => redirect("/contacto")
 
   # Experience
   match 'experiencia' => 'application#experience'
