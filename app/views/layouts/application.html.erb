@@ -29,10 +29,10 @@
 
             <!-- Menu -->
             <div class="nav">
-              <% if action_name.eql?('portfolio') %>
-                <%= link_to('portfolio', portfolio_path, :class=>'current') %>
+              <% if current_page?(:action => 'contact')  %>
+                <%= link_to('contacto', contacto_path, :class=>'current') %>
               <%else%>
-                <%= link_to('portfolio', portfolio_path) %>
+                <%= link_to('contacto', contacto_path) %>
               <%end%>
 
               <% if current_page?(:action => 'experience')  %>
@@ -41,11 +41,6 @@
                 <%= link_to('experiencia', experiencia_path) %>
               <%end%>
 
-              <% if current_page?(:action => 'contact')  %>
-                <%= link_to('contacto', contacto_path, :class=>'current') %>
-              <%else%>
-                <%= link_to('contacto', contacto_path) %>
-              <%end%>
 
               <% if current_page?(:action => 'blog')  %>
                 <%= link_to('blog', blog_path, :class=>'current') %>
@@ -58,48 +53,6 @@
 
           <%= yield %>
 
-          <div class="footer">
-              <div class="layout">
-                <div class="inner_layout footer">
-                  <div class="first">
-                    <%= link_to (image_tag "common/bg-logo-little.png", :alt => 'Vanessa Viaji Logo', :class=>'vane_logo'), root_path %>
-                    <ul>
-                      <li>
-                        <label>mail</label>
-                        <%= link_to('vavilop [at] yahoo [dot] es', 'mailto:vavilop@yahoo.es') %>
-                      </li>
-                      <li>
-                        <label>twitter</label>
-                        <%= link_to('@vavilop', 'http://www.twitter.com/vavilop') %>
-                      </li>
-                      <li>
-                        <label>linkedin</label>
-                        <%= link_to('vanessaviaji', 'http://www.linkedin.com/in/vanessaviaji') %>
-                      </li>
-                      <li>
-                        <label>flickr</label>
-                        <%= link_to('vavilop', 'http://www.flickr.com/photos/vavilop') %>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="tweets">
-                    <h5>últimos tweets</h5>
-                    <div id="last_tweets"></div>
-                  </div> <!-- tweets -->
-                  <div class="nav">
-                    <%= link_to('blog', blog_path) %>
-                    <%= link_to('contacto', contacto_path) %>
-                    <%= link_to('experiencia', experiencia_path) %>
-                    <%= link_to('portfolio', portfolio_path) %>
-                  </div>
-                  <div id="developed_by">
-                    <%= link_to('Web diseñada y desarrollada por Raúl Barroso', 'http://www.raulbarroso.com', :class=>'info', :target => 'blank') %>
-                    <%= link_to (image_tag "common/bg-logo-ra.png", :alt => 'Raúl Barroso Logo'), 'http://www.raulbarroso.com', :target => 'blank' %>
-                  </div>
-                </div>
-              </div>
-          </div>
     </div> <!-- outer_layout -->
 </body>
 </html>
